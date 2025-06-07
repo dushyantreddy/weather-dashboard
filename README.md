@@ -1,11 +1,11 @@
-````markdown
+
 # Weather Dashboard
 
 A responsive React web app that lets users search for any city’s current weather and 5-day forecast using the OpenWeatherMap API.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework:** React (Create React App)  
 - **Data Fetching:** JavaScript Fetch API  
@@ -15,32 +15,28 @@ A responsive React web app that lets users search for any city’s current weath
 
 ---
 
-## ✨ Features & Functionality
+## Features & Functionality
 
 1. **City Search**  
    - Enter any city name to view its weather.  
-
 2. **Current Weather Display**  
    - Shows temperature (°C), humidity, wind speed, and description.  
-
 3. **5-Day Forecast**  
    - Displays midday forecast for the next 5 days in a responsive grid.  
-
 4. **Search History**  
    - Saves your last five searches in localStorage for quick recall.  
-
 5. **Mobile-First Responsive Design**  
    - Layout adapts from single-column (mobile) to multi-column (desktop).
 
 ---
 
-## 🚀 Setup & Run Locally
+## Setup & Run Locally
 
 1. **Clone the repo**  
    ```bash
    git clone https://github.com/dushyantreddy/weather-dashboard.git
    cd weather-dashboard
-````
+
 
 2. **Install dependencies**
 
@@ -51,7 +47,7 @@ A responsive React web app that lets users search for any city’s current weath
 3. **Add your OpenWeatherMap API key**
 
    * Create a file named `.env` in the project root.
-   * Add:
+   * Add the following line (replace with your own key):
 
      ```
      REACT_APP_OPENWEATHER_KEY=YOUR_API_KEY_HERE
@@ -75,7 +71,7 @@ A responsive React web app that lets users search for any city’s current weath
 
 ---
 
-## 📦 Deployment to GitHub Pages
+## Deployment to GitHub Pages
 
 1. **Install gh-pages** (if you haven’t already):
 
@@ -86,10 +82,12 @@ A responsive React web app that lets users search for any city’s current weath
 2. **Configure** your `package.json`:
 
    ```jsonc
-   "homepage": "https://dushyantreddy.github.io/weather-dashboard",
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy":   "gh-pages -d build"
+   {
+     "homepage": "https://dushyantreddy.github.io/weather-dashboard",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build"
+     }
    }
    ```
 
@@ -99,31 +97,17 @@ A responsive React web app that lets users search for any city’s current weath
    npm run deploy
    ```
 
-Your live site will be available at
-
-```
-https://dushyantreddy.github.io/weather-dashboard/
-```
+   Your live site will be available at:
+   `https://dushyantreddy.github.io/weather-dashboard/`
 
 ---
 
-## 📚 References
+## References
 
 * **React Docs:** [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html)
 * **OpenWeatherMap API:** [https://openweathermap.org/api](https://openweathermap.org/api)
 * **gh-pages npm:** [https://www.npmjs.com/package/gh-pages](https://www.npmjs.com/package/gh-pages)
 * **MDN (Flexbox & Grid):** [https://developer.mozilla.org/](https://developer.mozilla.org/)
 
-````
-
----  
-After saving, commit and push:
-
-```bash
-git add README.md
-git commit -m "Replace default CRA README with project README"
-git push origin main
-````
-
-Now your GitHub repo will show the proper project README.
-
+```
+```

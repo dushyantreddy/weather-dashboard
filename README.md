@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+````markdown
+# Weather Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React web app that lets users search for any city’s current weather and 5-day forecast using the OpenWeatherMap API.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠 Tech Stack
 
-### `npm start`
+- **Framework:** React (Create React App)  
+- **Data Fetching:** JavaScript Fetch API  
+- **Styling:** CSS Flexbox & Grid, Media Queries  
+- **Version Control:** Git & GitHub  
+- **Deployment:** GitHub Pages (via gh-pages)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features & Functionality
 
-### `npm test`
+1. **City Search**  
+   - Enter any city name to view its weather.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Current Weather Display**  
+   - Shows temperature (°C), humidity, wind speed, and description.  
 
-### `npm run build`
+3. **5-Day Forecast**  
+   - Displays midday forecast for the next 5 days in a responsive grid.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Search History**  
+   - Saves your last five searches in localStorage for quick recall.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **Mobile-First Responsive Design**  
+   - Layout adapts from single-column (mobile) to multi-column (desktop).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Setup & Run Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/dushyantreddy/weather-dashboard.git
+   cd weather-dashboard
+````
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Add your OpenWeatherMap API key**
 
-## Learn More
+   * Create a file named `.env` in the project root.
+   * Add:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+     ```
+     REACT_APP_OPENWEATHER_KEY=YOUR_API_KEY_HERE
+     ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Start the development server**
 
-### Code Splitting
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Opens at `http://localhost:3000`.
 
-### Analyzing the Bundle Size
+5. **Build for production**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm run build
+   ```
 
-### Making a Progressive Web App
+   Static files go into the `build/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📦 Deployment to GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Install gh-pages** (if you haven’t already):
 
-### Deployment
+   ```bash
+   npm install --save-dev gh-pages
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. **Configure** your `package.json`:
 
-### `npm run build` fails to minify
+   ```jsonc
+   "homepage": "https://dushyantreddy.github.io/weather-dashboard",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy":   "gh-pages -d build"
+   }
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. **Deploy**:
+
+   ```bash
+   npm run deploy
+   ```
+
+Your live site will be available at
+
+```
+https://dushyantreddy.github.io/weather-dashboard/
+```
+
+---
+
+## 📚 References
+
+* **React Docs:** [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html)
+* **OpenWeatherMap API:** [https://openweathermap.org/api](https://openweathermap.org/api)
+* **gh-pages npm:** [https://www.npmjs.com/package/gh-pages](https://www.npmjs.com/package/gh-pages)
+* **MDN (Flexbox & Grid):** [https://developer.mozilla.org/](https://developer.mozilla.org/)
+
+````
+
+---  
+After saving, commit and push:
+
+```bash
+git add README.md
+git commit -m "Replace default CRA README with project README"
+git push origin main
+````
+
+Now your GitHub repo will show the proper project README.
+
